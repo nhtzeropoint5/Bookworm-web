@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router';
 import Tag from './Tag';
 import { FaStar } from 'react-icons/fa6';
 
 const Book = ({book}) => {
     return (
-        <div>
-            <div className="card bg-base-100 w-96 shadow-sm">
+        <Link to={`/bookDetails/${book.bookId}`} className="w-full">
+            <div className="card bg-base-100 w-full shadow-sm">
   <figure className='p-6'>
     <img
       src={book.image} className='rounded-2xl h-55'/>
@@ -27,7 +28,7 @@ const Book = ({book}) => {
     </div>
   </div>
 </div>
-        </div>
+        </Link>
     );
 };
 
