@@ -12,7 +12,7 @@ const Details = () => {
     const {bokId, bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing} = expectedBook;
     
 
-    const {storedBooks, setStoredBooks, handleMarkasRead} = useContext(BookContext);
+    const {storedBooks, setStoredBooks, handleMarkasRead, handleWishlist, wishlist, setWishlist} = useContext(BookContext);
 
    
 
@@ -56,7 +56,7 @@ const Details = () => {
 
      
       <button className="btn btn-primary" onClick={()=>{handleMarkasRead(expectedBook)}}>Mark As Read</button>
-      <button className="btn btn-success btn-outline">Add to Wishlist</button>
+      <button className="btn btn-success btn-outline" onClick={()=>handleWishlist(expectedBook)}>Add to Wishlist</button>
     </div>   </div>
   </div>
 </div>
