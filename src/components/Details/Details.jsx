@@ -9,7 +9,7 @@ const Details = () => {
     const {id} = useParams();
     const expectedBook = books.find(book => book.bookId == id);
 
-    const {bokId, bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing} = expectedBook;
+    const {bookId, bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing} = expectedBook;
     
 
     const {storedBooks, setStoredBooks, handleMarkasRead, handleWishlist, wishlist, setWishlist} = useContext(BookContext);
@@ -49,7 +49,7 @@ const Details = () => {
             <span>Year of Publishing: {yearOfPublishing}</span>
         </div>
         <div className='flex justify-between items-center gap-2'>
-            <span>Number of pages: {totalPages}</span>
+            <span>Rating: {rating}</span>
         </div>
 
         <div className="flex items-center gap-4">
